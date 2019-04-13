@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping package="admin.domain" >
+	<class name="Category3" table="category_3" >
+		<id name="cid"  >
+			<!-- generator:主键生成策略 -->
+			<generator class="native"></generator>
+		</id>
+		<property name="cname" column="cname" ></property>
+		<property name="cid_2" column="cid_2" ></property>
+	</class>
+</hibernate-mapping>

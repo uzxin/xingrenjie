@@ -3,7 +3,6 @@ package admin.domain;
 public class Product {
 	private String pid;//商品编号
 	private String pname;//商品名称
-	private double market_price;//市场价格
 	private double shop_price;//商城价格
 	private String pimage;//商品图片
 	private String pdate;//上架日期
@@ -23,12 +22,6 @@ public class Product {
 	}
 	public void setPname(String pname) {
 		this.pname = pname;
-	}
-	public double getMarket_price() {
-		return market_price;
-	}
-	public void setMarket_price(double market_price) {
-		this.market_price = market_price;
 	}
 	public double getShop_price() {
 		return shop_price;

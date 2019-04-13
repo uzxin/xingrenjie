@@ -25,13 +25,13 @@
 		d = new dTree('d');
 		d.add('01',-1,'系统菜单树'); //01代表本级节点的编号  -1代表根节点
 		d.add('0102','01','分类管理','','','mainFrame');//0102代表本级节点的编号   01代表父级节点
-		d.add('010201','0102','一级分类管理','${pageContext.request.contextPath}/adminCategoryList','','mainFrame');
-		d.add('010202','0102','二级分类管理','${pageContext.request.contextPath}/adminCategoryList','','mainFrame');
-		d.add('010203','0102','三级分类管理','${pageContext.request.contextPath}/adminCategoryList','','mainFrame');
+		d.add('010201','0102','一级分类管理','${pageContext.request.contextPath}/adminCategoryList1','','mainFrame');
+		d.add('010202','0102','二级分类管理','${pageContext.request.contextPath}/adminCategoryList2','','mainFrame');
+		d.add('010203','0102','三级分类管理','${pageContext.request.contextPath}/adminCategoryList3','','mainFrame');
 		d.add('0104','01','商品管理');
 		d.add('010401','0104','商品管理','${pageContext.request.contextPath}/adminProductList','','mainFrame');
-		d.add('0105','01','人事管理');
-		d.add('010501','0105','人事管理','${pageContext.request.contextPath}/admin/product/list.jsp','','mainFrame');
+		d.add('0105','01','用户管理');
+		d.add('010501','0105','用户管理','${pageContext.request.contextPath}/admin/product/list.jsp','','mainFrame');
 		d.add('0106','01','订单管理');
 		d.add('010601','0106','订单管理','${pageContext.request.contextPath}/admin/order/order.jsp','','mainFrame');
 		document.write(d);

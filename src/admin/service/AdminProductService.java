@@ -1,48 +1,25 @@
 package admin.service;
 
-import java.sql.SQLException;
 import java.util.List;
 
-import admin.dao.AdminProductDao;
-import admin.domain.Category;
+import admin.domain.Category3;
 import admin.domain.Condition;
 import admin.domain.Product;
 
-public class AdminProductService {
+public interface AdminProductService {
+	//获取商品分类列表
+	List<Category3> findAllCategory();
 	//获取商品列表
-	public List<Product> findAllProduct() throws SQLException {
-		AdminProductDao dao = new AdminProductDao();
-		return dao.findAllProduct();
-	}
-	//获取分类列表
-	public List<Category> findAllCategory() throws SQLException {
-		AdminProductDao dao = new AdminProductDao();
-		return dao.findAllCategory();
-	}
+	List<Product> findAllProduct();
 	//添加商品
-	public void addProduct(Product product) throws SQLException {
-		AdminProductDao dao = new AdminProductDao();
-		dao.addProduct(product);
-	}
-	//根据pid查询商品对象
-	public Product findProductByPid(String pid) throws SQLException {
-		AdminProductDao dao = new AdminProductDao();
-		return dao.findProductByPid(pid);
-	}
-	//更新商品
-	public void updateProduct(Product product) throws SQLException {
-		AdminProductDao dao = new AdminProductDao();
-		dao.updateProduct(product);
-	}
-	//根据pid删除商品
-	public void delProductByPid(String pid) throws SQLException {
-		AdminProductDao dao = new AdminProductDao();
-		dao.delProductByPid(pid);
-	}
-	//根据条件查询商品列表
-	public List<Product> findProductListByCondition(Condition condition) throws SQLException {
-		AdminProductDao dao = new AdminProductDao();
-		return dao.findProductListByCondition(condition);
-	}
+	void addProduct(Product product);
+	//删除商品
+	void delProductByPid(String pid);
+	//根据pid查找商品
+	Product findProductByPid(String pid);
+	//更新商品信息
+	void updateProduct(Product product);
+	//通过条件筛选商品列表
+	List<Product> findProductListByCondition(Condition condition);
 
 }

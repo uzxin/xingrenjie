@@ -16,14 +16,21 @@
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
 
 		<!-- 将hibernate生成的sql语句打印到控制台 -->
-		<property name="hibernate.show_sql">true</property>
+		<!-- <property name="hibernate.show_sql">true</property> -->
 		<!-- 将hibernate生成的sql语句格式化(语法缩进) -->
-		<property name="hibernate.format_sql">true</property>
+		<!-- <property name="hibernate.format_sql">true</property> -->
 		<!-- 自动生成表-->
 		<property name="hibernate.hbm2ddl.auto">update</property>
 		<!-- 指定session与当前线程绑定 -->
 		<property name="hibernate.current_session_context_class">thread</property>
 		<!-- 引入orm元数据 -->
+		<!-- 后台 -->
+		<mapping resource="admin/domain/AdminUser.hbm.xml"/>
+		<mapping resource="admin/domain/Category1.hbm.xml"/>
+		<mapping resource="admin/domain/Category2.hbm.xml"/>
+		<mapping resource="admin/domain/Category3.hbm.xml"/>
+		<mapping resource="admin/domain/Product.hbm.xml"/>
+		<!-- 前台 -->
 		<mapping resource="client/domain/User.hbm.xml" />
 		<mapping resource="client/domain/Category_1.hbm.xml" />
 		<mapping resource="client/domain/Category_2.hbm.xml" />
