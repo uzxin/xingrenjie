@@ -42,7 +42,7 @@ font {
 			<div class="col-md-8"
 				style="background: #fff; padding: 40px 80px; margin: 30px; border: 7px solid #ccc;">
 				<font>会员注册</font>USER REGISTER
-				<form class="form-horizontal" style="margin-top: 5px;" action="${pageContext.request.contextPath }/register">
+				<form class="form-horizontal" style="margin-top: 5px;" action="${pageContext.request.contextPath }/userAction_register">
 					<div class="form-group">
 						<label for="username" class="col-sm-2 control-label">用户名</label>
 						<div class="col-sm-6">
@@ -83,23 +83,11 @@ font {
 							</label>
 						</div>
 					</div>
-
-					<div class="form-group">
-						<label for="date" class="col-sm-2 control-label">验证码</label>
-						<div class="col-sm-3">
-							<input type="text" class="form-control">
-
-						</div>
-						<div class="col-sm-2">
-							<img src="./image/captcha.jhtml" />
-						</div>
-
-					</div>
-
 					<div class="form-group">
 						<div class="col-sm-offset-2 col-sm-10">
 							<input type="submit" width="100" value="注册" name="submit"
 								style="background: url('./images/register.gif') no-repeat scroll 0 0 rgba(0, 0, 0, 0); height: 35px; width: 100px; color: white;">
+								<a href="${pageContext.request.contextPath }/login.jsp" style="color:red">已有账号，去登陆</a>							
 						</div>
 					</div>
 				</form>

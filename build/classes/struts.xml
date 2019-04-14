@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+	
+<struts>
+	<constant name="struts.devMode" value="true"></constant><!-- 打开开发者模式 -->
+	<!-- 进行action配置 -->
+	<package name="client" namespace="/" extends="struts-default" >
+		<!-- 首页 -->
+		<action name="homePageAction" class="client.web.action.HomePageAction" method="execute">	
+			<result name="toindex">/index.jsp</result>
+		</action>
+		<!-- 用户登陆注册 -->
+		<action name="userAction_*" class="client.web.action.UserAction" method="{1}">	
+			<result name="toindex" type="redirectAction">
+	             <param name="actionName">homePageAction</param>
+	             <param name="namespace">/</param>
+	         </result>
+			<result name="toLogin">/login.jsp</result>
+		</action>
+		
+		
+		
+		
+	</package>
+	
+	
+</struts>
+

@@ -54,11 +54,11 @@ font {
 					style="width: 440px; border: 1px solid #E7E7E7; padding: 20px 0 20px 30px; border-radius: 5px; margin-top: 60px; background: #fff;">
 					<font>会员登录</font>USER LOGIN
 					<div style="color: red"><%=request.getAttribute("loginInfo")==null?"":request.getAttribute("loginInfo") %></div>
-					<form class="form-horizontal" action="${pageContext.request.contextPath }/login" method="post">
+					<form class="form-horizontal" action="${pageContext.request.contextPath }/userAction_login" method="post">
 						<div class="form-group">
 							<label for="username" class="col-sm-2 control-label">用户名</label>
 							<div class="col-sm-6">
-								<input type="text" class="form-control" id="username" name="username"
+								<input type="text" class="form-control" id="username" name="username" value="${param.username}"
 									placeholder="请输入用户名">
 							</div>
 						</div>
@@ -76,7 +76,7 @@ font {
 									placeholder="请输入验证码">
 							</div>
 							<div class="col-sm-3">
-								<img src="${pageContext.request.contextPath }/checkImg" />
+								<img src="${pageContext.request.contextPath }/checkImg.servlet" />
 							</div>
 						</div>
 						<div class="form-group">
@@ -93,7 +93,7 @@ font {
 							<div class="col-sm-offset-2 col-sm-10">
 								<input type="submit" width="100" value="登录" name="submit"
 									style="background: url('./images/login.gif') no-repeat scroll 0 0 rgba(0, 0, 0, 0); height: 35px; width: 100px; color: white;">
-							<a href="${pageContext.request.contextPath }/register.jsp">没有账号，立即注册一个吧</a>
+							<a href="${pageContext.request.contextPath }/register.jsp" style="color:red">没有账号，立即注册一个吧</a>
 							</div>
 						</div>
 					</form>

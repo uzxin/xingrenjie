@@ -22,7 +22,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * 验证码生成程序
  */
-@WebServlet("/checkImg")
+@WebServlet("/checkImg.servlet")
 public class CheckImgServlet extends HttpServlet {
 
 	// 集合中保存所有成语

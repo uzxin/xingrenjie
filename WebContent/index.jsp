@@ -51,8 +51,14 @@
 		
 		<div class="register_login">
 			<em>您好，</em>
-			<a href="${pageContext.request.contextPath }/login.jsp">会员登录</a>
-			<a href="${pageContext.request.contextPath }/register.jsp">快速注册</a>
+			<c:if test="${empty sessionScope.user }">
+				<a href="${pageContext.request.contextPath }/login.jsp">会员登录</a>
+				<a href="${pageContext.request.contextPath }/register.jsp">快速注册</a>
+			</c:if>
+			<c:if test="${not empty sessionScope.user }">
+				<a href="#">${sessionScope.user.username }</a>
+				<a href="#">退出</a> 
+			</c:if>
 		</div>
 		<div class="vip_center">
 			<a href="${pageContext.request.contextPath}/admin/login.jsp">卖家中心</a>
