@@ -7,19 +7,13 @@ import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.hibernate.cfg.Configuration;
 import org.hibernate.criterion.Restrictions;
 import org.junit.Test;
-
-import admin.domain.AdminUser;
-import admin.domain.Category1;
-import admin.domain.Category2;
-import admin.domain.Product;
-import admin.utils.DataSourceUtils;
 import admin.utils.HibernateUtils;
-import client.domain.User;
+import client.service.impl.CategoryServiceImpl;
+import client.utils.DataSourceUtils;
+import client.domain.*;
 
 //测试Hibernate框架
 public class Demo {
@@ -33,6 +27,44 @@ public class Demo {
 		session.update(p);
 		tx.commit();
 	}
+	
+	@Test
+	public void fun22(){
+		
+		List<Product> list = new CategoryServiceImpl().getAllProduct();
+		System.out.println(list.size());
+		for (Product product : list) {
+			System.out.println(product.getPname());
+		}
+		
+		
+		
+		
+		
+		/*Session session = HibernateUtils.openSession();
+		Transaction tx = session.beginTransaction();
+		Criteria c = session.createCriteria(Product.class);
+		c.add(Restrictions.eq("pname", "小米 4c 标准版"));
+		Product p = (Product) c.uniqueResult();
+		tx.commit();
+		System.out.println(p.getPdesc());*/
+		
+		
+		
+		/*QueryRunner runner = new QueryRunner(DataSourceUtils.getDataSource());
+		String sql = "select * from product";
+		List<Product> p =null;
+		try {
+			p = runner.query(sql, new BeanListHandler<Product>(Product.class));
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		for (Product product : p) {
+			System.out.println(product.getPname());
+		}*/
+	}
+	
+	
 	
 }
 	

@@ -1,5 +1,7 @@
 package client.web.action;
 
+import org.apache.struts2.ServletActionContext;
+
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
@@ -23,14 +25,18 @@ public class UserAction extends ActionSupport implements ModelDriven<User>{
 		//验证码通过后，在进行用户验证
 		//进行该用户查询
 		UserService service = new UserServiceImpl();
-		User user_exit = service.login(user.getUsername(),user.getPassword());
-		if(user_exit!=null){
-			ActionContext.getContext().getSession().put("user", user_exit);//将用户信息存入session
-			return "toindex";//登陆成功，跳转到首页
-		}else {
-			//用户名或密码错误
-			ActionContext.getContext().put("loginInfo", "用户名或密码错误");
-			return "toLogin";//跳转到登陆界面
+		User user_exit = service.login(user);
+		if(user_exit == null){
+			ActionContext.getContext().put("loginInfo", "用户名不存在");
+			return "toLogin";
+		}else{
+			if(!user_exit.getPassword().equals(user.getPassword())){
+				ActionContext.getContext().put("loginInfo", "密码错误");
+				return "toLogin";//跳转到登陆界面
+			}else{
+				ActionContext.getContext().getSession().put("user", user);//将用户信息存入session
+				return "toindex";//登陆成功，跳转到首页
+			}
 		}
 	}
 	
@@ -42,6 +48,15 @@ public class UserAction extends ActionSupport implements ModelDriven<User>{
 		ActionContext.getContext().getSession().put("user", user);//将用户信息存入session
 		return "toindex";//注册成功跳转到首页
 	}
+	
+	//异步判断用户名是否已经存在
+	public void checkUsernameIsExist() throws Exception {
+		String username = ServletActionContext.getRequest().getParameter("username");
+		UserService service = new UserServiceImpl();
+		boolean isExist = service.checkUsernameIsExist(username);
+		
+		ServletActionContext.getResponse().getWriter().write("{\"isExist\":"+isExist+"}");
+	}
 
 	
 	
@@ -51,22 +66,6 @@ public class UserAction extends ActionSupport implements ModelDriven<User>{
 
 	public void setCheckCode(String checkCode) {
 		this.checkCode = checkCode;
-	}
-
-	public String getUsername() {
-		return username;
-	}
-
-	public void setUsername(String username) {
-		this.username = username;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
 	}
 
 	public User getUser() {

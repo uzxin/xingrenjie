@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -53,7 +54,7 @@ font {
 				<div
 					style="width: 440px; border: 1px solid #E7E7E7; padding: 20px 0 20px 30px; border-radius: 5px; margin-top: 60px; background: #fff;">
 					<font>会员登录</font>USER LOGIN
-					<div style="color: red"><%=request.getAttribute("loginInfo")==null?"":request.getAttribute("loginInfo") %></div>
+					<div style="color: red"><%=request.getAttribute("loginInfo")==null?"":request.getAttribute("loginInfo") %> </div>
 					<form class="form-horizontal" action="${pageContext.request.contextPath }/userAction_login" method="post">
 						<div class="form-group">
 							<label for="username" class="col-sm-2 control-label">用户名</label>

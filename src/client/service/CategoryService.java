@@ -6,6 +6,7 @@ import client.domain.Advertisement;
 import client.domain.Category_1;
 import client.domain.Category_2;
 import client.domain.Category_3;
+import client.domain.Product;
 
 public interface CategoryService {
 	//获取一级分类列表
@@ -16,5 +17,9 @@ public interface CategoryService {
 	List<Advertisement> getAlladvertisement();
 	//获取三级分类列表
 	List<Category_3> getAllCategory_3();
+	//获取所有商品列表
+	List<Product> getAllProduct();
+	
+	
 
 }

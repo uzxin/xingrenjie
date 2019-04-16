@@ -35,6 +35,6 @@
 		<mapping resource="client/domain/Category_2.hbm.xml" />
 		<mapping resource="client/domain/Category_3.hbm.xml" />
 		<mapping resource="client/domain/Advertisement.hbm.xml" />
-		<mapping resource="admin/domain/Product.hbm.xml"/>
+		<mapping resource="client/domain/Product.hbm.xml"/>
 	</session-factory>
 </hibernate-configuration>

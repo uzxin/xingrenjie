@@ -1,7 +1,7 @@
 package client.domain;
 
 public class Product {
-	private String pid;//商品编号
+	private Long pid;//商品编号
 	private String pname;//商品名称
 	private double shop_price;//商城价格
 	private String pimage;//商品图片
@@ -11,10 +11,10 @@ public class Product {
 	private int pflag;//是否已经下架,0代表未下架
 	private String cid;//分类编号
 	
-	public String getPid() {
+	public Long getPid() {
 		return pid;
 	}
-	public void setPid(String pid) {
+	public void setPid(Long pid) {
 		this.pid = pid;
 	}
 	public String getPname() {

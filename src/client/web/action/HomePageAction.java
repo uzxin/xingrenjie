@@ -7,6 +7,7 @@ import client.domain.Advertisement;
 import client.domain.Category_1;
 import client.domain.Category_2;
 import client.domain.Category_3;
+import client.domain.Product;
 import client.service.CategoryService;
 import client.service.impl.CategoryServiceImpl;
 
@@ -17,6 +18,7 @@ public class HomePageAction extends ActionSupport{
 		List<Category_1> list1 = service.getAllCategory_1();//一级分类列表
 		List<Category_2> list2 = service.getAllCategory_2();//二级分类列表
 		List<Category_3> list3 = service.getAllCategory_3();//三级分类列表
+		List<Product> productList = service.getAllProduct();//商品列表
 		List<Advertisement> adverList = service.getAlladvertisement();//广告列表
 		//将三级分类封装到二级分类中
 		int i = 0;
@@ -28,16 +30,10 @@ public class HomePageAction extends ActionSupport{
 		ActionContext.getContext().put("list1", list1);
 		ActionContext.getContext().put("list2", list2);
 		ActionContext.getContext().put("adverList", adverList);
+		ActionContext.getContext().put("productList", productList);
 		ActionContext.getContext().put("list3", list3);
 		//跳转到首页
 		return "toindex";
 	}
 
-
-
-
-
-
-
-	
 }

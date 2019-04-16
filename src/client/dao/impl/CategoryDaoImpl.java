@@ -4,12 +4,14 @@ import java.util.List;
 
 import org.hibernate.Criteria;
 import org.hibernate.Session;
+import org.hibernate.criterion.Restrictions;
 
 import client.dao.CategoryDao;
 import client.domain.Advertisement;
 import client.domain.Category_1;
 import client.domain.Category_2;
 import client.domain.Category_3;
+import client.domain.Product;
 import client.utils.HibernateUtils;
 
 public class CategoryDaoImpl implements CategoryDao {
@@ -41,5 +43,15 @@ public class CategoryDaoImpl implements CategoryDao {
 		Criteria criteria = session.createCriteria(Category_3.class);
 		return criteria.list();
 	}
+
+	//获取所有商品列表
+	public List<Product> getAllProduct() {
+		Session session = HibernateUtils.getCurrentSession();
+		Criteria criteria = session.createCriteria(Product.class);
+		return criteria.list();
+	}
+
+
+	
 
 }

@@ -324,338 +324,72 @@
 <div>
 	<div class="currency f-0-lt01">
 		<ul>
-			<li>
-				<a href="#">
-					<img src="首页/ad1.jpg" style=" margin:0 auto; display:block; width:220px; height:220px">
-				</a>
-				<light1>
-					<img src="首页/saoguang.png">
-				</light1>
-				<span>￥4299.00</span>
-				<a href="#">
-					<p>海尔冰箱（haier）BCD-642WDVMU1 642升风冷无霜对开门 智能 大容积  </p>
-				</a>
-				<em>
-					<a href="#">收藏</a>
-					<a href="javascript:void(0)" class="add_scar">加入购物车</a>
-				</em>
-			</li>
-			<li>
-				<a href="#">
-					<img src="首页/ad2.jpg" style=" margin:0 auto; display:block; width:220px; height:220px">
-				</a>
-				<light1>
-					<img src="首页/saoguang.png">
-				</light1>
-				<span>￥2149</span>
-				<a href="#">
-					<p>【官网价直降1100】Apple iPhone 6s Plus 32G 玫瑰金 移动联通电信4G 手机</p>
-				</a>
-				<em>
-					<a href="#">收藏</a>
-					<a href="javascript:void(0)" class="add_scar">加入购物车</a>
-				</em>
-			</li>
-			<li>
-				<a href="#">
-					<img src="首页/ad3.jpg" style=" margin:0 auto; display:block; width:220px; height:220px">
-				</a>
-				<light1>
-					<img src="首页/saoguang.png">
-				</light1>
-				<span>￥199</span>
-				<a href="#">
-					<p>Apple iPad MPGW2CH/A 平板电脑 9.7英寸（128G/WLAN）金色 </p>
-				</a>
-				<em>
-					<a href="#">收藏</a>
-					<a href="javascript:void(0)" class="add_scar">加入购物车</a>
-				</em>
-			</li>
-			<li>
-				<a href="#">
-					<img src="首页/ad4.jpg" style=" margin:0 auto; display:block; width:220px; height:220px">
-				</a>
-				<light1>
-					<img src="首页/saoguang.png">
-				</light1>
-				<span>￥199</span>
-				<a href="#">
-					<p>Apple iPad MPGW2CH/A 平板电脑 9.7英寸（128G/WLAN）金色 </p>
-				</a>
-				<em>
-					<a href="#">收藏</a>
-					<a href="javascript:void(0)" class="add_scar">加入购物车</a>
-				</em>
-			</li>
-			<li>
-				<a href="#">
-					<img src="首页/ad5.jpg" style=" margin:0 auto; display:block; width:220px; height:220px">
-				</a>
-				<light1>
-					<img src="首页/saoguang.png">
-				</light1>
-				<span>￥199</span>
-				<a href="#">
-					<p>Apple iPad MPGW2CH/A 平板电脑 9.7英寸（128G/WLAN）金色 </p>
-				</a>
-				<em>
-					<a href="#">收藏</a>
-					<a href="javascript:void(0)" class="add_scar">加入购物车</a>
-				</em>
-			</li>
+			<c:forEach items="${productList }" begin="0" end="4" var="p">
+					<li><a href="#"> <img src="${p.pimage }"
+							style="margin: 0 auto; display: block; width: 220px; height: 220px">
+					</a> <light1> <img src="首页/saoguang.png"> </light1> <span>￥${p.shop_price }</span>
+						<a href="#">
+							<p>${p.pdesc }</p>
+					</a> <em> <a href="#">收藏</a> <a href="javascript:void(0)"
+							class="add_scar">加入购物车</a>
+					</em></li>
+			</c:forEach>
 		</ul>
 	</div>
 	<div class="currency f-0-lt02" style="display:none">
 		<ul>
-			<li>
-				<a href="#">
-					<img src="首页/add1.jpg" style=" margin:0 auto; display:block; width:220px; height:220px">
-				</a>
-				<light1>
-					<img src="首页/saoguang.png">
-				</light1>
-				<span>￥199</span>
-				<a href="#">
-					<p>Apple iPad MPGW2CH/A 平板电脑 9.7英寸（128G/WLAN）金色 </p>
-				</a>
-				<em>
-					<a href="#">收藏</a>
-					<a href="javascript:void(0)" class="add_scar">加入购物车</a>
-				</em>
-			</li>
-			<li>
-				<a href="#">
-					<img src="首页/add1.jpg" style=" margin:0 auto; display:block; width:220px; height:220px">
-				</a>
-				<light1>
-					<img src="首页/saoguang.png">
-				</light1>
-				<span>￥199</span>
-				<a href="#">
-					<p>Apple iPad MPGW2CH/A 平板电脑 9.7英寸（128G/WLAN）金色 </p>
-				</a>
-				<em>
-					<a href="#">收藏</a>
-					<a href="javascript:void(0)" class="add_scar">加入购物车</a>
-				</em>
-			</li>
-			<li>
-				<a href="#">
-					<img src="首页/add1.jpg" style=" margin:0 auto; display:block; width:220px; height:220px">
-				</a>
-				<light1>
-					<img src="首页/saoguang.png">
-				</light1>
-				<span>￥199</span>
-				<a href="#">
-					<p>Apple iPad MPGW2CH/A 平板电脑 9.7英寸（128G/WLAN）金色 </p>
-				</a>
-				<em>
-					<a href="#">收藏</a>
-					<a href="javascript:void(0)" class="add_scar">加入购物车</a>
-				</em>
-			</li>
-			<li>
-				<a href="#">
-					<img src="首页/add1.jpg" style=" margin:0 auto; display:block; width:220px; height:220px">
-				</a>
-				<light1>
-					<img src="首页/saoguang.png">
-				</light1>
-				<span>￥199</span>
-				<a href="#">
-					<p>Apple iPad MPGW2CH/A 平板电脑 9.7英寸（128G/WLAN）金色 </p>
-				</a>
-				<em>
-					<a href="#">收藏</a>
-					<a href="javascript:void(0)" class="add_scar">加入购物车</a>
-				</em>
-			</li>
-			<li>
-				<a href="#">
-					<img src="首页/add1.jpg" style=" margin:0 auto; display:block; width:220px; height:220px">
-				</a>
-				<light1>
-					<img src="首页/saoguang.png">
-				</light1>
-				<span>￥199</span>
-				<a href="#">
-					<p>Apple iPad MPGW2CH/A 平板电脑 9.7英寸（128G/WLAN）金色 </p>
-				</a>
-				<em>
-					<a href="#">收藏</a>
-					<a href="javascript:void(0)" class="add_scar">加入购物车</a>
-				</em>
-			</li>
+			<c:forEach items="${productList }" begin="5" end="9" var="p">
+					<li><a href="#"> <img src="${p.pimage }"
+							style="margin: 0 auto; display: block; width: 220px; height: 220px">
+					</a> <light1> <img src="首页/saoguang.png"> </light1> <span>￥${p.shop_price }</span>
+						<a href="#">
+							<p>${p.pdesc }</p>
+					</a> <em> <a href="#">收藏</a> <a href="javascript:void(0)"
+							class="add_scar">加入购物车</a>
+					</em></li>
+			</c:forEach>
 		</ul>
 	</div>
 	<div class="currency f-0-lt03" style="display:none">
 		<ul>
-			<li>
-				<a href="#">
-					<img src="首页/ad2.jpg" style=" margin:0 auto; display:block; width:220px; height:220px">
-				</a>
-				<light1>
-					<img src="首页/saoguang.png">
-				</light1>
-				<span>￥199</span>
-				<a href="#">
-					<p>Apple iPad MPGW2CH/A 平板电脑 9.7英寸（128G/WLAN）金色 </p>
-				</a>
-				<em>
-					<a href="#">收藏</a>
-					<a href="javascript:void(0)" class="add_scar">加入购物车</a>
-				</em>
-			</li>
-			<li>
-				<a href="#">
-					<img src="首页/ad2.jpg" style=" margin:0 auto; display:block; width:220px; height:220px">
-				</a>
-				<light1>
-					<img src="首页/saoguang.png">
-				</light1>
-				<span>￥199</span>
-				<a href="#">
-					<p>Apple iPad MPGW2CH/A 平板电脑 9.7英寸（128G/WLAN）金色 </p>
-				</a>
-				<em>
-					<a href="#">收藏</a>
-					<a href="javascript:void(0)" class="add_scar">加入购物车</a>
-				</em>
-			</li>
-			<li>
-				<a href="#">
-					<img src="首页/ad2.jpg" style=" margin:0 auto; display:block; width:220px; height:220px">
-				</a>
-				<light1>
-					<img src="首页/saoguang.png">
-				</light1>
-				<span>￥199</span>
-				<a href="#">
-					<p>Apple iPad MPGW2CH/A 平板电脑 9.7英寸（128G/WLAN）金色 </p>
-				</a>
-				<em>
-					<a href="#">收藏</a>
-					<a href="javascript:void(0)" class="add_scar">加入购物车</a>
-				</em>
-			</li>
-			<li>
-				<a href="#">
-					<img src="首页/ad2.jpg" style=" margin:0 auto; display:block; width:220px; height:220px">
-				</a>
-				<light1>
-					<img src="首页/saoguang.png">
-				</light1>
-				<span>￥199</span>
-				<a href="#">
-					<p>Apple iPad MPGW2CH/A 平板电脑 9.7英寸（128G/WLAN）金色 </p>
-				</a>
-				<em>
-					<a href="#">收藏</a>
-					<a href="javascript:void(0)" class="add_scar">加入购物车</a>
-				</em>
-			</li>
-			<li>
-				<a href="#">
-					<img src="首页/ad2.jpg" style=" margin:0 auto; display:block; width:220px; height:220px">
-				</a>
-				<light1>
-					<img src="首页/saoguang.png">
-				</light1>
-				<span>￥199</span>
-				<a href="#">
-					<p>Apple iPad MPGW2CH/A 平板电脑 9.7英寸（128G/WLAN）金色 </p>
-				</a>
-				<em>
-					<a href="#">收藏</a>
-					<a href="javascript:void(0)" class="add_scar">加入购物车</a>
-				</em>
-			</li>
+			<c:forEach items="${productList }" begin="10" end="14" var="p">
+					<li><a href="#"> <img src="${p.pimage }"
+							style="margin: 0 auto; display: block; width: 220px; height: 220px">
+					</a> <light1> <img src="首页/saoguang.png"> </light1> <span>￥${p.shop_price }</span>
+						<a href="#">
+							<p>${p.pdesc }</p>
+					</a> <em> <a href="#">收藏</a> <a href="javascript:void(0)"
+							class="add_scar">加入购物车</a>
+					</em></li>
+			</c:forEach>
 		</ul>
 	</div>
 	<div class="currency f-0-lt04" style="display:none">
 		<ul>
-			<li>
-				<a href="#">
-					<img src="首页/ad9.jpg" style=" margin:0 auto; display:block; width:220px; height:220px">
-				</a>
-				<light1>
-					<img src="首页/saoguang.png">
-				</light1>
-				<span>￥199</span>
-				<a href="#">
-					<p>Apple iPad MPGW2CH/A 平板电脑 9.7英寸（128G/WLAN）金色 </p>
-				</a>
-				<em>
-					<a href="#">收藏</a>
-					<a href="javascript:void(0)" class="add_scar">加入购物车</a>
-				</em>
-			</li>
-			<li>
-				<a href="#">
-					<img src="首页/ad9.jpg" style=" margin:0 auto; display:block; width:220px; height:220px">
-				</a>
-				<light1>
-					<img src="首页/saoguang.png">
-				</light1>
-				<span>￥199</span>
-				<a href="#">
-					<p>Apple iPad MPGW2CH/A 平板电脑 9.7英寸（128G/WLAN）金色 </p>
-				</a>
-				<em>
-					<a href="#">收藏</a>
-					<a href="javascript:void(0)" class="add_scar">加入购物车</a>
-				</em>
-			</li>
-			<li>
-				<a href="#">
-					<img src="首页/ad9.jpg" style=" margin:0 auto; display:block; width:220px; height:220px">
-				</a>
-				<light1>
-					<img src="首页/saoguang.png">
-				</light1>
-				<span>￥199</span>
-				<a href="#">
-					<p>Apple iPad MPGW2CH/A 平板电脑 9.7英寸（128G/WLAN）金色 </p>
-				</a>
-				<em>
-					<a href="#">收藏</a>
-					<a href="javascript:void(0)" class="add_scar">加入购物车</a>
-				</em>
-			</li>
-			<li>
-				<a href="#">
-					<img src="首页/ad9.jpg" style=" margin:0 auto; display:block; width:220px; height:220px">
-				</a>
-				<light1>
-					<img src="首页/saoguang.png">
-				</light1>
-				<span>￥199</span>
-				<a href="#">
-					<p>Apple iPad MPGW2CH/A 平板电脑 9.7英寸（128G/WLAN）金色 </p>
-				</a>
-				<em>
-					<a href="#">收藏</a>
-					<a href="javascript:void(0)" class="add_scar">加入购物车</a>
-				</em>
-			</li>
-			<li>
-				<a href="#">
-					<img src="首页/ad9.jpg" style=" margin:0 auto; display:block; width:220px; height:220px">
-				</a>
-				<light1>
-					<img src="首页/saoguang.png">
-				</light1>
-				<span>￥199</span>
-				<a href="#">
-					<p>Apple iPad MPGW2CH/A 平板电脑 9.7英寸（128G/WLAN）金色 </p>
-				</a>
-				<em>
-					<a href="#">收藏</a>
-					<a href="javascript:void(0)" class="add_scar">加入购物车</a>
-				</em>
-			</li>
+			<c:forEach items="${productList }" begin="15" end="19" var="p">
+					<li><a href="#"> <img src="${p.pimage }"
+							style="margin: 0 auto; display: block; width: 220px; height: 220px">
+					</a> <light1> <img src="首页/saoguang.png"> </light1> <span>￥${p.shop_price }</span>
+						<a href="#">
+							<p>${p.pdesc }</p>
+					</a> <em> <a href="#">收藏</a> <a href="javascript:void(0)"
+							class="add_scar">加入购物车</a>
+					</em></li>
+			</c:forEach>
+		</ul>
+	</div>
+	<div class="currency f-0-lt05" style="display:none">
+		<ul>
+			<c:forEach items="${productList }" begin="20" end="24" var="p">
+					<li><a href="#"> <img src="${p.pimage }"
+							style="margin: 0 auto; display: block; width: 220px; height: 220px">
+					</a> <light1> <img src="首页/saoguang.png"> </light1> <span>￥${p.shop_price }</span>
+						<a href="#">
+							<p>${p.pdesc }</p>
+					</a> <em> <a href="#">收藏</a> <a href="javascript:void(0)"
+							class="add_scar">加入购物车</a>
+					</em></li>
+			</c:forEach>
 		</ul>
 	</div>
 </div>

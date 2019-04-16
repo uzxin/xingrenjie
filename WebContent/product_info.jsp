@@ -40,12 +40,12 @@ body {
 				<div class="col-md-6">
 					<img style="opacity: 1; width: 400px; height: 350px;" title=""
 						class="medium"
-						src="image/r___________renleipic_01/bigPic5f3622b8-028a-4e62-a77f-f41a16d715ed.jpg">
+						src="${product.pimage }">
 				</div>
 
 				<div class="col-md-6">
 					<div>
-						<strong>大冬瓜</strong>
+						<strong>${product.pname }</strong>
 					</div>
 					<div
 						style="border-bottom: 1px dotted #dddddd; width: 350px; margin: 10px 0 10px 0;">
@@ -53,7 +53,7 @@ body {
 					</div>
 
 					<div style="margin: 10px 0 10px 0;">
-						亿家价: <strong style="color: #ef0101;">￥：4.78元/份</strong> 参 考 价：
+						亿家价: <strong style="color: #ef0101;">￥：${product.shop_price }元/份</strong> 参 考 价：
 						<del>￥6.00元/份</del>
 					</div>
 

@@ -12,14 +12,14 @@ import client.utils.HibernateUtils;
 public class UserServiceImpl implements UserService {
 	private UserDao dao = new UserDaoImpl();
 	
-	//通过用户名和密码查询用户
-	public User login(String username, String password) {
+	//通过用户名查询用户
+	public User login(User user) {
 		Session session = HibernateUtils.getCurrentSession();
 		Transaction tx = session.beginTransaction();//开启事务
 		//调用dao层方法进行查询
-		User user = dao.login(username, password);
+		User u = dao.login(user.getUsername());
 		tx.commit();//提交事务
-		return user;
+		return u;
 	}
 
 	//用户注册
@@ -28,6 +28,12 @@ public class UserServiceImpl implements UserService {
 		Transaction tx = session.beginTransaction();//开启事务
 		dao.register(user);
 		tx.commit();
+	}
+
+	//异步判断用户名是否存在
+	public boolean checkUsernameIsExist(String username) {
+		Long isExist = dao.checkUsernameIsExist(username);
+		return isExist>0?true:false;
 	}
 
 }

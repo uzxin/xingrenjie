@@ -11,6 +11,7 @@ import client.domain.Advertisement;
 import client.domain.Category_1;
 import client.domain.Category_2;
 import client.domain.Category_3;
+import client.domain.Product;
 import client.service.CategoryService;
 import client.utils.HibernateUtils;
 
@@ -49,5 +50,14 @@ public class CategoryServiceImpl implements CategoryService {
 		tx.commit();
 		return list;
 	}
-
+	//获得所有分类列表
+	public List<Product> getAllProduct() {
+		Session session = HibernateUtils.getCurrentSession();
+		Transaction tx = session.beginTransaction();
+		List<Product> list = dao.getAllProduct();
+		tx.commit();
+		return list;
+	}
+	
+	
 }
