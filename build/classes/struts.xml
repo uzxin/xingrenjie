@@ -19,10 +19,9 @@
 	         </result>
 			<result name="toLogin">/login.jsp</result>
 		</action>
-		
-		
-		
-		
+		<action name="productAction_*" class="client.web.action.ProductAction" method="{1}">
+			<result name="toProductInfo">/product_info.jsp</result>
+		</action>
 	</package>
 	
 	

@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>会员登录</title>
+<title>商品详情页</title>
 <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
 <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
 <script src="js/bootstrap.min.js" type="text/javascript"></script>
@@ -49,7 +49,7 @@ body {
 					</div>
 					<div
 						style="border-bottom: 1px dotted #dddddd; width: 350px; margin: 10px 0 10px 0;">
-						<div>编号：751</div>
+						<div>编号：${product.pid }</div>
 					</div>
 
 					<div style="margin: 10px 0 10px 0;">
@@ -83,15 +83,6 @@ body {
 			</div>
 			<div class="clear"></div>
 			<div style="width: 950px; margin: 0 auto;">
-				<div
-					style="background-color: #d3d3d3; width: 930px; padding: 10px 10px; margin: 10px 0 10px 0;">
-					<strong>商品介绍</strong>
-				</div>
-
-				<div>
-					<img
-						src="image/r___________renleipic_01/bigPic139f030b-d68b-41dd-be6d-b94cc568d3c5.jpg">
-				</div>
 
 				<div
 					style="background-color: #d3d3d3; width: 930px; padding: 10px 10px; margin: 10px 0 10px 0;">
@@ -101,19 +92,10 @@ body {
 					<table class="table table-bordered">
 						<tbody>
 							<tr class="active">
-								<th colspan="2">基本参数</th>
+								<th colspan="2">商品简介</th>
 							</tr>
 							<tr>
-								<th width="10%">级别</th>
-								<td width="30%">标准</td>
-							</tr>
-							<tr>
-								<th width="10%">标重</th>
-								<td>500</td>
-							</tr>
-							<tr>
-								<th width="10%">浮动</th>
-								<td>200</td>
+								<th width="10%">${product.pdesc }</th>
 							</tr>
 						</tbody>
 					</table>

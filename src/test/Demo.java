@@ -12,6 +12,7 @@ import org.hibernate.criterion.Restrictions;
 import org.junit.Test;
 import admin.utils.HibernateUtils;
 import client.service.impl.CategoryServiceImpl;
+import client.service.impl.ProductServiceImpl;
 import client.utils.DataSourceUtils;
 import client.domain.*;
 
@@ -30,41 +31,28 @@ public class Demo {
 	
 	@Test
 	public void fun22(){
-		
 		List<Product> list = new CategoryServiceImpl().getAllProduct();
 		System.out.println(list.size());
 		for (Product product : list) {
 			System.out.println(product.getPname());
 		}
-		
-		
-		
-		
-		
-		/*Session session = HibernateUtils.openSession();
-		Transaction tx = session.beginTransaction();
-		Criteria c = session.createCriteria(Product.class);
-		c.add(Restrictions.eq("pname", "小米 4c 标准版"));
-		Product p = (Product) c.uniqueResult();
-		tx.commit();
-		System.out.println(p.getPdesc());*/
-		
-		
-		
-		/*QueryRunner runner = new QueryRunner(DataSourceUtils.getDataSource());
-		String sql = "select * from product";
-		List<Product> p =null;
-		try {
-			p = runner.query(sql, new BeanListHandler<Product>(Product.class));
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		for (Product product : p) {
-			System.out.println(product.getPname());
-		}*/
+	}
+	@Test
+	public void fun21(){
+		Long pid = 43l;
+		Session session = client.utils.HibernateUtils.openSession();
+		Criteria criteria = session.createCriteria(Product.class);
+		criteria.add(Restrictions.eq("pid", pid));
+		Product p = (Product) criteria.uniqueResult();
+		System.out.println(p.getPname());
 	}
 	
-	
+	@Test
+	public void fun123321(){
+		Long pid = 1l;
+		Product p =new ProductServiceImpl().getProductByPid(pid);
+		System.out.println(p.getPname());
+	}
 	
 }
 	

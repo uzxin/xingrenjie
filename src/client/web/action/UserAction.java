@@ -1,5 +1,7 @@
 package client.web.action;
 
+import java.util.Map;
+
 import org.apache.struts2.ServletActionContext;
 
 import com.opensymphony.xwork2.ActionContext;
@@ -58,6 +60,14 @@ public class UserAction extends ActionSupport implements ModelDriven<User>{
 		ServletActionContext.getResponse().getWriter().write("{\"isExist\":"+isExist+"}");
 	}
 
+	//退出登陆
+	public String exit() throws Exception{
+		ServletActionContext.getRequest().getSession().invalidate();//清除session
+		return "toindex";
+	}
+	
+	
+	
 	
 	
 	public String getCheckCode() {

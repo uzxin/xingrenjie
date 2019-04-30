@@ -57,7 +57,7 @@
 			</c:if>
 			<c:if test="${not empty sessionScope.user }">
 				<a href="#">${sessionScope.user.username }</a>
-				<a href="#">退出</a> 
+				<a href="${pageContext.request.contextPath }/userAction_exit">退出</a> 
 			</c:if>
 		</div>
 		<div class="vip_center">
@@ -308,7 +308,7 @@
 </div>
 <!--潮流男装-->
 <span class="as blessing_package pick-back-b">
-            <a href="#" style=" color:#000">
+            <a href="${pageContext.request }" style=" color:#000">
                 <h3 style="float:left" class="pick-back1">潮流男装</h3>
             </a>
             <div class="detailed_navigation">
@@ -325,10 +325,10 @@
 	<div class="currency f-0-lt01">
 		<ul>
 			<c:forEach items="${productList }" begin="0" end="4" var="p">
-					<li><a href="#"> <img src="${p.pimage }"
+					<li><a href="${pageContext.request.contextPath }/productAction_toProductInfo?pid=${p.pid }"> <img src="${p.pimage }"
 							style="margin: 0 auto; display: block; width: 220px; height: 220px">
 					</a> <light1> <img src="首页/saoguang.png"> </light1> <span>￥${p.shop_price }</span>
-						<a href="#">
+						<a href="${pageContext.request.contextPath }/productAction_toProductInfo?pid=${p.pid }">
 							<p>${p.pdesc }</p>
 					</a> <em> <a href="#">收藏</a> <a href="javascript:void(0)"
 							class="add_scar">加入购物车</a>
@@ -339,10 +339,10 @@
 	<div class="currency f-0-lt02" style="display:none">
 		<ul>
 			<c:forEach items="${productList }" begin="5" end="9" var="p">
-					<li><a href="#"> <img src="${p.pimage }"
+					<li><a href="${pageContext.request.contextPath }/productAction_toProductInfo?pid=${p.pid }"> <img src="${p.pimage }"
 							style="margin: 0 auto; display: block; width: 220px; height: 220px">
 					</a> <light1> <img src="首页/saoguang.png"> </light1> <span>￥${p.shop_price }</span>
-						<a href="#">
+						<a href="${pageContext.request.contextPath }/productAction_toProductInfo?pid=${p.pid }">
 							<p>${p.pdesc }</p>
 					</a> <em> <a href="#">收藏</a> <a href="javascript:void(0)"
 							class="add_scar">加入购物车</a>
@@ -353,10 +353,10 @@
 	<div class="currency f-0-lt03" style="display:none">
 		<ul>
 			<c:forEach items="${productList }" begin="10" end="14" var="p">
-					<li><a href="#"> <img src="${p.pimage }"
+					<li><a href="${pageContext.request.contextPath }/productAction_toProductInfo?pid=${p.pid }"> <img src="${p.pimage }"
 							style="margin: 0 auto; display: block; width: 220px; height: 220px">
 					</a> <light1> <img src="首页/saoguang.png"> </light1> <span>￥${p.shop_price }</span>
-						<a href="#">
+						<a href="${pageContext.request.contextPath }/productAction_toProductInfo?pid=${p.pid }">
 							<p>${p.pdesc }</p>
 					</a> <em> <a href="#">收藏</a> <a href="javascript:void(0)"
 							class="add_scar">加入购物车</a>
@@ -367,10 +367,10 @@
 	<div class="currency f-0-lt04" style="display:none">
 		<ul>
 			<c:forEach items="${productList }" begin="15" end="19" var="p">
-					<li><a href="#"> <img src="${p.pimage }"
+					<li><a href="${pageContext.request.contextPath }/productAction_toProductInfo?pid=${p.pid }"> <img src="${p.pimage }"
 							style="margin: 0 auto; display: block; width: 220px; height: 220px">
 					</a> <light1> <img src="首页/saoguang.png"> </light1> <span>￥${p.shop_price }</span>
-						<a href="#">
+						<a href="${pageContext.request.contextPath }/productAction_toProductInfo?pid=${p.pid }">
 							<p>${p.pdesc }</p>
 					</a> <em> <a href="#">收藏</a> <a href="javascript:void(0)"
 							class="add_scar">加入购物车</a>
@@ -381,10 +381,10 @@
 	<div class="currency f-0-lt05" style="display:none">
 		<ul>
 			<c:forEach items="${productList }" begin="20" end="24" var="p">
-					<li><a href="#"> <img src="${p.pimage }"
+					<li><a href="${pageContext.request.contextPath }/productAction_toProductInfo?pid=${p.pid }"> <img src="${p.pimage }"
 							style="margin: 0 auto; display: block; width: 220px; height: 220px">
 					</a> <light1> <img src="首页/saoguang.png"> </light1> <span>￥${p.shop_price }</span>
-						<a href="#">
+						<a href="${pageContext.request.contextPath }/productAction_toProductInfo?pid=${p.pid }">
 							<p>${p.pdesc }</p>
 					</a> <em> <a href="#">收藏</a> <a href="javascript:void(0)"
 							class="add_scar">加入购物车</a>

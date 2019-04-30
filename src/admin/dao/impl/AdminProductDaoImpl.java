@@ -63,7 +63,7 @@ public class AdminProductDaoImpl implements AdminProductDao {
 		session.update(p);
 	}
 
-	//根据庭条件筛选商品列表
+	//根据条件筛选商品列表
 	public List<Product> findProductListByCondition(Condition condition) {
 		QueryRunner runner = new QueryRunner(DataSourceUtils.getDataSource());
 		//定义一个存储实际参数的容器
